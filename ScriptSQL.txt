@@ -1,0 +1,25 @@
+CREATE DATASE p_cp_estado;
+USER p_cp_estado;
+
+CREATE TABLE t_estado (  
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    direccion VARCHAR(50) NOT NULL,
+    ciudad VARCHAR(30) NOT NULL,
+    telefono VARCHAR(20) NOT NULL,
+    codigo_postal VARCHAR(10) NOT NULL,
+    tipo VARCHAR(20) NOT NULL,
+    precio DOUBLE
+ );
+
+
+SELECT * from t_estado;
+
+SELECT DISTINCT tipo FROM t_estado;
+SELECT DISTINCT ciudad FROM t_estado;
+
+
+SELECT id,direccion,ciudad,telefono,codigo_postal,tipo,precio FROM t_estado ;
+
+
+SELECT id,direccion,ciudad,telefono,codigo_postal,tipo,precio FROM t_estado  WHERE ciudad='York' AND tipo = 'Casa' AND (precio>=40 AND  precio<=100);
+
